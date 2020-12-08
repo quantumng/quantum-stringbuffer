@@ -8,16 +8,11 @@
 <body>
     <div id="entry" style="width: 100px;height: 100px;background-color: hotpink;"></div>
     <script src="./dist/index.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/eruda-timing@2.0.0"></script>
     <script>
-        new QuantumConsole({
-            url: '//cdn.jsdelivr.net/npm/eruda',
-            entry: '#entry',
-            consoleConfig: {
-                tool: ['console', 'elements']
-            },
-            plugins: [erudaTiming]
-        });
+        var stringBuffer = new QuantumStringBuffer();
+        console.log('stringBuffer', stringBuffer);
+        stringBuffer.Append('a');
+        console.log('stringBuffer', stringBuffer.IsEmpty());
     </script>
 </body>
 </html>
